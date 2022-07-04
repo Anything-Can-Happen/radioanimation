@@ -1,16 +1,16 @@
-local handsUp = false
+local animation = false
 CreateThread(function()
     while true do
         Wait(0)
-        if handsUp then
-            TaskHandsUp(PlayerPedId(), 250, PlayerPedId(), -1, true)
+        if animation = true then
+            TaskPlayAnim(PlayerPedId(), "random@arrests", "generic_radio_enter", 8.0, 2.0, -1, 50, 2.0, 0, 0, 0)
         end
     end
 end)
-RegisterCommand('+handsup', function()
-    handsUp = true
+RegisterCommand('+ranimation', function()
+    animation = true
 end, false)
-RegisterCommand('-handsup', function()
-    handsUp = false
+RegisterCommand('-ranimation', function()
+    animation = false
 end, false)
-RegisterKeyMapping('+handsup', 'Hands Up', 'keyboard', 'i')
+RegisterKeyMapping('+ranimation', 'Radio Animation', 'keyboard', '*')
