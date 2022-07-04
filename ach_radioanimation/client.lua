@@ -2,7 +2,7 @@ local animation = false
 CreateThread(function()
     while true do
         Wait(0)
-        if animation = true then
+        if animation then
             TaskPlayAnim(PlayerPedId(), "random@arrests", "generic_radio_enter", 8.0, 2.0, -1, 50, 2.0, 0, 0, 0)
         end
     end
